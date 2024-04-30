@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/mcibula/ontologies/conflict-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/mcibula/ontologies/conflict-ontology">
+    <Prefix name="" IRI="http://www.semanticweb.org/mcibula/ontologies/conflict-ontology/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Aftermath"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AgentGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Battle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Belligerent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BelligerentGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cause"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Conference"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Conflict"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConflictAftermath"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConflictType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GovernmentForm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HistoricalPeriod"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Occupation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PolarAftermath"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PoliticalOutcome"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RegimeChange"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Religion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Result"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialOutcome"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#State"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TerritorialChange"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Truce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Victory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#War"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#endDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#startDate"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AgentGroup"/>
+        <Class IRI="#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Battle"/>
+        <Class IRI="#Conflict"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BelligerentGroup"/>
+        <Class IRI="#Belligerent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Conference"/>
+        <Class IRI="#PoliticalOutcome"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConflictAftermath"/>
+        <Class IRI="#Aftermath"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Occupation"/>
+        <Class IRI="#PolarAftermath"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <Class IRI="#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PolarAftermath"/>
+        <Class IRI="#Aftermath"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PoliticalOutcome"/>
+        <Class IRI="#Aftermath"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegimeChange"/>
+        <Class IRI="#PoliticalOutcome"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialOutcome"/>
+        <Class IRI="#Aftermath"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#State"/>
+        <Class IRI="#Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TerritorialChange"/>
+        <Class IRI="#PolarAftermath"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Truce"/>
+        <Class IRI="#Result"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Victory"/>
+        <Class IRI="#Result"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#War"/>
+        <Class IRI="#Conflict"/>
+    </SubClassOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#endDate"/>
+        <Class IRI="#Aftermath"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#endDate"/>
+        <Class IRI="#Agent"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#endDate"/>
+        <Class IRI="#Conflict"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#startDate"/>
+        <Class IRI="#Aftermath"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#startDate"/>
+        <Class IRI="#Agent"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#startDate"/>
+        <Class IRI="#Conflict"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#endDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#startDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
