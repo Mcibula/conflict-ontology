@@ -94,9 +94,6 @@
         <Class IRI="#War"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#after"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#aftermath"/>
     </Declaration>
     <Declaration>
@@ -106,10 +103,7 @@
         <ObjectProperty IRI="#area"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#before"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#belligerents"/>
+        <ObjectProperty IRI="#belligerent"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#casusBelli"/>
@@ -121,13 +115,13 @@
         <ObjectProperty IRI="#conflict"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#consistsOf"/>
+        <ObjectProperty IRI="#conflictType"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#contains"/>
+        <ObjectProperty IRI="#followedByHistoricalPeriod"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#followedBy"/>
+        <ObjectProperty IRI="#followedByState"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#governmentForm"/>
@@ -136,7 +130,22 @@
         <ObjectProperty IRI="#inFavorOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#inPeriod"/>
+        <ObjectProperty IRI="#inHistoricalPeriod"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includesAgent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includesBattle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includesBelligerent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includesHistoricalPeriod"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includesState"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isAgent"/>
@@ -145,10 +154,10 @@
         <ObjectProperty IRI="#leader"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#leaders"/>
+        <ObjectProperty IRI="#location"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#location"/>
+        <ObjectProperty IRI="#locationInState"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#notInFavorOf"/>
@@ -160,10 +169,19 @@
         <ObjectProperty IRI="#partOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#partOfHistoricalPeriod"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#partOfWar"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#participantIn"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#precededBy"/>
+        <ObjectProperty IRI="#precededByHistoricalPeriod"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#precededByState"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#religion"/>
@@ -175,10 +193,16 @@
         <ObjectProperty IRI="#sibling"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#type"/>
+        <ObjectProperty IRI="#spouse"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#area"/>
+        <ObjectProperty IRI="#stateAfter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#stateBefore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#victoryType"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#casualties"/>
@@ -269,13 +293,197 @@
         <Class IRI="#Conflict"/>
     </SubClassOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#aftermath"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#agent"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#area"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#belligerent"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#casusBelli"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#after"/>
-        <Class IRI="#RegimeChange"/>
-    </ObjectPropertyDomain>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#child"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#conflict"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#conflictType"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#followedByHistoricalPeriod"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#followedByState"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#governmentForm"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#inFavorOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#inHistoricalPeriod"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#includesAgent"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#includesBattle"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#includesBelligerent"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#includesHistoricalPeriod"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#includesState"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isAgent"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#leader"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#location"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#locationInState"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#notInFavorOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#parent"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#partOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#partOfHistoricalPeriod"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#partOfWar"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#participantIn"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#precededByHistoricalPeriod"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#precededByState"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#religion"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#result"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#sibling"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#spouse"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#stateAfter"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#stateBefore"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#victoryType"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#aftermath"/>
+        <ObjectProperty IRI="#conflict"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#belligerent"/>
+        <ObjectProperty IRI="#conflict"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#child"/>
+        <ObjectProperty IRI="#parent"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#conflict"/>
+        <ObjectProperty IRI="#result"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#followedByHistoricalPeriod"/>
+        <ObjectProperty IRI="#precededByHistoricalPeriod"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#followedByState"/>
+        <ObjectProperty IRI="#precededByState"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#inHistoricalPeriod"/>
+        <ObjectProperty IRI="#includesAgent"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#includesAgent"/>
+        <ObjectProperty IRI="#partOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#includesBattle"/>
+        <ObjectProperty IRI="#partOfWar"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#includesHistoricalPeriod"/>
+        <ObjectProperty IRI="#partOfHistoricalPeriod"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#stateAfter"/>
+        <ObjectProperty IRI="#stateBefore"/>
+    </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#aftermath"/>
         <Class IRI="#Conflict"/>
@@ -293,11 +501,7 @@
         <Class IRI="#TerritorialChange"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#before"/>
-        <Class IRI="#RegimeChange"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#belligerents"/>
+        <ObjectProperty IRI="#belligerent"/>
         <Class IRI="#Conflict"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -325,35 +529,15 @@
         <Class IRI="#Result"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#consistsOf"/>
-        <Class IRI="#AgentGroup"/>
+        <ObjectProperty IRI="#conflictType"/>
+        <Class IRI="#Conflict"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#consistsOf"/>
-        <Class IRI="#BelligerentGroup"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#consistsOf"/>
+        <ObjectProperty IRI="#followedByHistoricalPeriod"/>
         <Class IRI="#HistoricalPeriod"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#consistsOf"/>
-        <Class IRI="#State"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#consistsOf"/>
-        <Class IRI="#War"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#contains"/>
-        <Class IRI="#HistoricalPeriod"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#followedBy"/>
-        <Class IRI="#HistoricalPeriod"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#followedBy"/>
+        <ObjectProperty IRI="#followedByState"/>
         <Class IRI="#State"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -365,8 +549,32 @@
         <Class IRI="#PolarAftermath"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#inPeriod"/>
+        <ObjectProperty IRI="#inHistoricalPeriod"/>
         <Class IRI="#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#includesAgent"/>
+        <Class IRI="#AgentGroup"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#includesAgent"/>
+        <Class IRI="#HistoricalPeriod"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#includesBattle"/>
+        <Class IRI="#War"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#includesBelligerent"/>
+        <Class IRI="#BelligerentGroup"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#includesHistoricalPeriod"/>
+        <Class IRI="#HistoricalPeriod"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#includesState"/>
+        <Class IRI="#State"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isAgent"/>
@@ -378,19 +586,19 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#leader"/>
-        <Class IRI="#State"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#leaders"/>
         <Class IRI="#Belligerent"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#location"/>
-        <Class IRI="#Conference"/>
+        <ObjectProperty IRI="#leader"/>
+        <Class IRI="#State"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#location"/>
         <Class IRI="#Conflict"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#locationInState"/>
+        <Class IRI="#Conference"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#notInFavorOf"/>
@@ -405,23 +613,23 @@
         <Class IRI="#Agent"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#partOf"/>
-        <Class IRI="#Battle"/>
+        <ObjectProperty IRI="#partOfHistoricalPeriod"/>
+        <Class IRI="#HistoricalPeriod"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#partOf"/>
-        <Class IRI="#HistoricalPeriod"/>
+        <ObjectProperty IRI="#partOfWar"/>
+        <Class IRI="#Battle"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#participantIn"/>
         <Class IRI="#Agent"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#precededBy"/>
+        <ObjectProperty IRI="#precededByHistoricalPeriod"/>
         <Class IRI="#HistoricalPeriod"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#precededBy"/>
+        <ObjectProperty IRI="#precededByState"/>
         <Class IRI="#State"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -437,17 +645,21 @@
         <Class IRI="#Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#type"/>
-        <Class IRI="#Conflict"/>
+        <ObjectProperty IRI="#spouse"/>
+        <Class IRI="#Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#type"/>
+        <ObjectProperty IRI="#stateAfter"/>
+        <Class IRI="#RegimeChange"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#stateBefore"/>
+        <Class IRI="#RegimeChange"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#victoryType"/>
         <Class IRI="#Victory"/>
     </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#after"/>
-        <Class IRI="#State"/>
-    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#aftermath"/>
         <Class IRI="#Aftermath"/>
@@ -461,11 +673,7 @@
         <Class IRI="#State"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#before"/>
-        <Class IRI="#State"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#belligerents"/>
+        <ObjectProperty IRI="#belligerent"/>
         <Class IRI="#Belligerent"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -481,39 +689,15 @@
         <Class IRI="#Conflict"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#consistsOf"/>
-        <Class IRI="#Agent"/>
+        <ObjectProperty IRI="#conflictType"/>
+        <Class IRI="#ConflictType"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#consistsOf"/>
-        <Class IRI="#AgentGroup"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#consistsOf"/>
-        <Class IRI="#Battle"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#consistsOf"/>
-        <Class IRI="#Belligerent"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#consistsOf"/>
+        <ObjectProperty IRI="#followedByHistoricalPeriod"/>
         <Class IRI="#HistoricalPeriod"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#consistsOf"/>
-        <Class IRI="#State"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#contains"/>
-        <Class IRI="#Agent"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#followedBy"/>
-        <Class IRI="#HistoricalPeriod"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#followedBy"/>
+        <ObjectProperty IRI="#followedByState"/>
         <Class IRI="#State"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -525,8 +709,28 @@
         <Class IRI="#Belligerent"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#inPeriod"/>
+        <ObjectProperty IRI="#inHistoricalPeriod"/>
         <Class IRI="#HistoricalPeriod"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#includesAgent"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#includesBattle"/>
+        <Class IRI="#Battle"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#includesBelligerent"/>
+        <Class IRI="#Belligerent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#includesHistoricalPeriod"/>
+        <Class IRI="#HistoricalPeriod"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#includesState"/>
+        <Class IRI="#State"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isAgent"/>
@@ -537,11 +741,11 @@
         <Class IRI="#Person"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#leaders"/>
-        <Class IRI="#Person"/>
+        <ObjectProperty IRI="#location"/>
+        <Class IRI="#State"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#location"/>
+        <ObjectProperty IRI="#locationInState"/>
         <Class IRI="#State"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -558,14 +762,14 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#partOf"/>
-        <Class IRI="#HistoricalPeriod"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#partOf"/>
         <Class IRI="#State"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#partOf"/>
+        <ObjectProperty IRI="#partOfHistoricalPeriod"/>
+        <Class IRI="#HistoricalPeriod"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#partOfWar"/>
         <Class IRI="#War"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -573,11 +777,11 @@
         <Class IRI="#Conflict"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#precededBy"/>
+        <ObjectProperty IRI="#precededByHistoricalPeriod"/>
         <Class IRI="#HistoricalPeriod"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#precededBy"/>
+        <ObjectProperty IRI="#precededByState"/>
         <Class IRI="#State"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -593,21 +797,57 @@
         <Class IRI="#Person"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#type"/>
-        <Class IRI="#ConflictType"/>
+        <ObjectProperty IRI="#spouse"/>
+        <Class IRI="#Person"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#type"/>
+        <ObjectProperty IRI="#stateAfter"/>
+        <Class IRI="#State"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#stateBefore"/>
+        <Class IRI="#State"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#victoryType"/>
         <Class IRI="#VictoryType"/>
     </ObjectPropertyRange>
-    <DataPropertyDomain>
-        <DataProperty IRI="#area"/>
-        <Class IRI="#Occupation"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#area"/>
-        <Class IRI="#TerritorialChange"/>
-    </DataPropertyDomain>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#inFavorOf"/>
+        <ObjectProperty IRI="#notInFavorOf"/>
+    </DisjointObjectProperties>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#casualties"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#description"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#endDate"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#location"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#name"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#outcome"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#startDate"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#strength"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty IRI="#casualties"/>
         <Class IRI="#Belligerent"/>
@@ -672,10 +912,6 @@
         <DataProperty IRI="#strength"/>
         <Class IRI="#Belligerent"/>
     </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="#area"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#casualties"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
