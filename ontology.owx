@@ -118,6 +118,9 @@
         <ObjectProperty IRI="#conflictType"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#consequentConflict"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#followedByHistoricalPeriod"/>
     </Declaration>
     <Declaration>
@@ -155,9 +158,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#location"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#locationInState"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#notInFavorOf"/>
@@ -202,6 +202,9 @@
         <ObjectProperty IRI="#stateBefore"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#venueState"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#victoryType"/>
     </Declaration>
     <Declaration>
@@ -214,9 +217,6 @@
         <DataProperty IRI="#endDate"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#location"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#name"/>
     </Declaration>
     <Declaration>
@@ -227,6 +227,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#strength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#venueLocation"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#AgentGroup"/>
@@ -377,10 +380,6 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#locationInState"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#notInFavorOf"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -437,6 +436,10 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#venueState"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#victoryType"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -484,6 +487,81 @@
         <ObjectProperty IRI="#stateAfter"/>
         <ObjectProperty IRI="#stateBefore"/>
     </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#sibling"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#spouse"/>
+    </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#area"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#child"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#consequentConflict"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#inFavorOf"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#location"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#notInFavorOf"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#parent"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#stateAfter"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#stateBefore"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#venueState"/>
+    </AsymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#sibling"/>
+    </TransitiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#area"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#child"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#consequentConflict"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#inFavorOf"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#location"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#notInFavorOf"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#parent"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#sibling"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#spouse"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#stateAfter"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#stateBefore"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#venueState"/>
+    </IrreflexiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#aftermath"/>
         <Class IRI="#Conflict"/>
@@ -522,15 +600,15 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#conflict"/>
-        <Class IRI="#ConflictAftermath"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#conflict"/>
         <Class IRI="#Result"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#conflictType"/>
         <Class IRI="#Conflict"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#consequentConflict"/>
+        <Class IRI="#ConflictAftermath"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#followedByHistoricalPeriod"/>
@@ -597,10 +675,6 @@
         <Class IRI="#Conflict"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#locationInState"/>
-        <Class IRI="#Conference"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#notInFavorOf"/>
         <Class IRI="#PolarAftermath"/>
     </ObjectPropertyDomain>
@@ -657,6 +731,10 @@
         <Class IRI="#RegimeChange"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#venueState"/>
+        <Class IRI="#Conference"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#victoryType"/>
         <Class IRI="#Victory"/>
     </ObjectPropertyDomain>
@@ -691,6 +769,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#conflictType"/>
         <Class IRI="#ConflictType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#consequentConflict"/>
+        <Class IRI="#Conflict"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#followedByHistoricalPeriod"/>
@@ -742,10 +824,6 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#location"/>
-        <Class IRI="#State"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#locationInState"/>
         <Class IRI="#State"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -809,6 +887,10 @@
         <Class IRI="#State"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#venueState"/>
+        <Class IRI="#State"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#victoryType"/>
         <Class IRI="#VictoryType"/>
     </ObjectPropertyRange>
@@ -829,10 +911,6 @@
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="#location"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="#name"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
@@ -846,6 +924,10 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#strength"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#venueLocation"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
@@ -873,10 +955,6 @@
         <Class IRI="#HistoricalPeriod"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#location"/>
-        <Class IRI="#Conference"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#name"/>
         <Class IRI="#Aftermath"/>
     </DataPropertyDomain>
@@ -911,6 +989,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="#strength"/>
         <Class IRI="#Belligerent"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#venueLocation"/>
+        <Class IRI="#Conference"/>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="#casualties"/>
@@ -925,10 +1007,6 @@
         <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#location"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="#name"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -944,10 +1022,29 @@
         <DataProperty IRI="#strength"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#venueLocation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Aftermath</IRI>
+        <Literal xml:lang="en">A class representing an aftermath or outcome of a conflict.</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Cause</IRI>
         <Literal xml:lang="en">An enumeration representing all of the different causes for conflict.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Conference</IRI>
+        <Literal xml:lang="en">A class representing a conference or other major political meeting of parties relevant to a conflict as a consequence of it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ConflictAftermath</IRI>
+        <Literal xml:lang="en">A class representing the aftermath when a conflict leads to a new conflict.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -966,6 +1063,26 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Occupation</IRI>
+        <Literal xml:lang="en">A class representing a temporary occupation of an area or state as a consequence of a conflict without a significant international ratification confirming the change of the area&apos;s status.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PolarAftermath</IRI>
+        <Literal xml:lang="en">A class representing an aftermath with clearly defined sides for which the aftermath is in favour or not.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PoliticalOutcome</IRI>
+        <Literal xml:lang="en">A class representing a political action or a change in a political setting as a consequence of a conflict.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RegimeChange</IRI>
+        <Literal xml:lang="en">A class representing a significant political or ideological change in the regime, government or political setting of an affected state or area as a result of a conflict.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Religion</IRI>
         <Literal xml:lang="en">An enumeration representing all of the different religions.</Literal>
     </AnnotationAssertion>
@@ -973,6 +1090,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Result</IRI>
         <Literal xml:lang="en">A class representing the result of conflict. Different types of results are represented by subclasses.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SocialOutcome</IRI>
+        <Literal xml:lang="en">A class representing a significant change in social, cultural, or religious circumstances affecting a large population of a state or area as a consequence of a conflict.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TerritorialChange</IRI>
+        <Literal xml:lang="en">A class representing an internationally ratified territorial change as a consequence of a conflict.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -991,8 +1118,33 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#area</IRI>
+        <Literal xml:lang="en">Represents the area affected by a territorial change or an occupation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#conflict</IRI>
+        <Literal xml:lang="en">Represents the conflict associated with a belligerent, aftermath or result.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#consequentConflict</IRI>
+        <Literal xml:lang="en">Represents the conflict incepted as a result of another conflict.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#description</IRI>
+        <Literal xml:lang="en">Represent the elaborate description of a nature of a thing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#endDate</IRI>
         <Literal xml:lang="en">Represents the date when an action, interval, or agent ends.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#inFavorOf</IRI>
+        <Literal xml:lang="en">Represents the belligerent for which the aftermath of a conflict is advantageous.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1006,6 +1158,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#notInFavorOf</IRI>
+        <Literal xml:lang="en">Represents the belligerent for which the aftermath of a conflict is detrimental.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#outcome</IRI>
+        <Literal xml:lang="en">Represents the outcome of a conference or meeting.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#partOfHistoricalPeriod</IRI>
         <Literal xml:lang="en">Represents the parent historical period of a given historical period.</Literal>
     </AnnotationAssertion>
@@ -1013,6 +1175,26 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#startDate</IRI>
         <Literal xml:lang="en">Represents the date when an action, interval, or agent begins.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#stateAfter</IRI>
+        <Literal xml:lang="en">Represents the state in time after a regime change took place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#stateBefore</IRI>
+        <Literal xml:lang="en">Represents the state in time before a regime change took place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#venueLocation</IRI>
+        <Literal xml:lang="en">Represents the exact location of a conference or meeting venue.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#venueState</IRI>
+        <Literal xml:lang="en">Represents the state in which a conference or meeting takes place.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
