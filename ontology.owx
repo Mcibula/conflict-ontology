@@ -944,6 +944,76 @@
         <DataProperty IRI="#strength"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Cause</IRI>
+        <Literal xml:lang="en">An enumeration representing all of the different causes for conflict.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ConflictType</IRI>
+        <Literal xml:lang="en">An enumeration representing all of the different conflict types.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GovernmentForm</IRI>
+        <Literal xml:lang="en">An enumeration representing all of the different government forms.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HistoricalPeriod</IRI>
+        <Literal xml:lang="en">A class representing an interval in history. It may encompass various historical periods and be comprised of others. Chronology is represented by periods that follow and precede each other.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Religion</IRI>
+        <Literal xml:lang="en">An enumeration representing all of the different religions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Result</IRI>
+        <Literal xml:lang="en">A class representing the result of conflict. Different types of results are represented by subclasses.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Truce</IRI>
+        <Literal xml:lang="en">A class representing a result of conflict that is neither victorious nor advantageous for all belligerents.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Victory</IRI>
+        <Literal xml:lang="en">A class representing a victorious result of conflict for one of the belligerents.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#VictoryType</IRI>
+        <Literal xml:lang="en">An enumeration representing all of the different victory types.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#endDate</IRI>
+        <Literal xml:lang="en">Represents the date when an action, interval, or agent ends.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#includesHistoricalPeriod</IRI>
+        <Literal xml:lang="en">Represents the child historical periods of a given historical period.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#name</IRI>
+        <Literal xml:lang="en">Represents the name of a thing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#partOfHistoricalPeriod</IRI>
+        <Literal xml:lang="en">Represents the parent historical period of a given historical period.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#startDate</IRI>
+        <Literal xml:lang="en">Represents the date when an action, interval, or agent begins.</Literal>
+    </AnnotationAssertion>
 </Ontology>
 
 
