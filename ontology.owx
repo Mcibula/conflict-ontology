@@ -154,6 +154,9 @@
         <ObjectProperty IRI="#isAgent"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isBeligerent"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#leader"/>
     </Declaration>
     <Declaration>
@@ -173,9 +176,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#partOfWar"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#participantIn"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#precededByHistoricalPeriod"/>
@@ -372,6 +372,10 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isBeligerent"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#leader"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -397,10 +401,6 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#partOfWar"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#participantIn"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -659,6 +659,10 @@
         <Class IRI="#Belligerent"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isBeligerent"/>
+        <Class IRI="#Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#leader"/>
         <Class IRI="#AgentGroup"/>
     </ObjectPropertyDomain>
@@ -693,10 +697,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#partOfWar"/>
         <Class IRI="#Battle"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#participantIn"/>
-        <Class IRI="#Agent"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#precededByHistoricalPeriod"/>
@@ -819,6 +819,10 @@
         <Class IRI="#Agent"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#isBeligerent"/>
+        <Class IRI="#Belligerent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#leader"/>
         <Class IRI="#Person"/>
     </ObjectPropertyRange>
@@ -849,10 +853,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#partOfWar"/>
         <Class IRI="#War"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#participantIn"/>
-        <Class IRI="#Conflict"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#precededByHistoricalPeriod"/>
@@ -1033,6 +1033,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Agent</IRI>
+        <Literal xml:lang="en">A class representing entities that were actively engaged in a conflict or whose infuelnce in said conflict was not negligible.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AgentGroup</IRI>
+        <Literal xml:lang="en">A class representing a coordinated assembly or organization of multiple agents, usually bound together by shared values and beliefs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Cause</IRI>
         <Literal xml:lang="en">An enumeration representing all of the different causes for conflict.</Literal>
     </AnnotationAssertion>
@@ -1068,6 +1078,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Person</IRI>
+        <Literal xml:lang="en">A class representing an individual human being.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#PolarAftermath</IRI>
         <Literal xml:lang="en">A class representing an aftermath with clearly defined sides for which the aftermath is in favour or not.</Literal>
     </AnnotationAssertion>
@@ -1098,6 +1113,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#State</IRI>
+        <Literal xml:lang="en">A class representing a political entity characterized by governance over a defined territory.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#TerritorialChange</IRI>
         <Literal xml:lang="en">A class representing an internationally ratified territorial change as a consequence of a conflict.</Literal>
     </AnnotationAssertion>
@@ -1123,6 +1143,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#child</IRI>
+        <Literal xml:lang="en">Represents the individual that has been conceived, born, or legally adopted by the parent individual.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#conflict</IRI>
         <Literal xml:lang="en">Represents the conflict associated with a belligerent, aftermath or result.</Literal>
     </AnnotationAssertion>
@@ -1143,13 +1168,48 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#followedByState</IRI>
+        <Literal xml:lang="en">Represents a state that is an immediate successor to a given state.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#governmentForm</IRI>
+        <Literal xml:lang="en">Represents the government form associated with a given entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#inFavorOf</IRI>
         <Literal xml:lang="en">Represents the belligerent for which the aftermath of a conflict is advantageous.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#inHistoricalPeriod</IRI>
+        <Literal xml:lang="en">Represents the historical period, within which did the agent exist.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#includesAgent</IRI>
+        <Literal xml:lang="en">Represents agent that was associated with a given entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#includesHistoricalPeriod</IRI>
         <Literal xml:lang="en">Represents the child historical periods of a given historical period.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#includesState</IRI>
+        <Literal xml:lang="en">Represents the state included within a given state.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isBeligerent</IRI>
+        <Literal xml:lang="en">Represents the beligerent whose agent is given agent.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#leader</IRI>
+        <Literal xml:lang="en">Represents the individual who directs, manages, or represents the group.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1168,8 +1228,38 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#parent</IRI>
+        <Literal xml:lang="en">Represents the individual that had a direct role in the conception, birth, or legal adoption of the child individual.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#partOf</IRI>
+        <Literal xml:lang="en">Represents larger entities who consdered the person a member or a citizen.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#partOfHistoricalPeriod</IRI>
         <Literal xml:lang="en">Represents the parent historical period of a given historical period.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#precededByState</IRI>
+        <Literal xml:lang="en">Represents a state that is an immediate ancestor to a given state.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#religion</IRI>
+        <Literal xml:lang="en">Represents the religion which the agent practices or whose beliefs, teachings, or community does the agent identifiy with.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sibling</IRI>
+        <Literal xml:lang="en">Represents the relationship between two individuals who share at least one common parent.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#spouse</IRI>
+        <Literal xml:lang="en">Represents a legal or recognized union between two individuals who are married to each other or in a committed partnership.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
