@@ -97,9 +97,6 @@
         <ObjectProperty IRI="#aftermath"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#agent"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#area"/>
     </Declaration>
     <Declaration>
@@ -300,10 +297,6 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#agent"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#area"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -487,6 +480,27 @@
         <ObjectProperty IRI="#stateAfter"/>
         <ObjectProperty IRI="#stateBefore"/>
     </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#conflict"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#followedByHistoricalPeriod"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#precededByHistoricalPeriod"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#victoryType"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#conflict"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#followedByHistoricalPeriod"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#precededByHistoricalPeriod"/>
+    </InverseFunctionalObjectProperty>
     <SymmetricObjectProperty>
         <ObjectProperty IRI="#sibling"/>
     </SymmetricObjectProperty>
@@ -503,7 +517,16 @@
         <ObjectProperty IRI="#consequentConflict"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#followedByHistoricalPeriod"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
         <ObjectProperty IRI="#inFavorOf"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#includesAgent"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#includesHistoricalPeriod"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
         <ObjectProperty IRI="#location"/>
@@ -515,6 +538,12 @@
         <ObjectProperty IRI="#parent"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#partOfHistoricalPeriod"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#precededByHistoricalPeriod"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
         <ObjectProperty IRI="#stateAfter"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
@@ -523,6 +552,15 @@
     <AsymmetricObjectProperty>
         <ObjectProperty IRI="#venueState"/>
     </AsymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#includesAgent"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#includesHistoricalPeriod"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#partOfHistoricalPeriod"/>
+    </TransitiveObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#sibling"/>
     </TransitiveObjectProperty>
@@ -536,7 +574,16 @@
         <ObjectProperty IRI="#consequentConflict"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#followedByHistoricalPeriod"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
         <ObjectProperty IRI="#inFavorOf"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#includesAgent"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#includesHistoricalPeriod"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
         <ObjectProperty IRI="#location"/>
@@ -546,6 +593,12 @@
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
         <ObjectProperty IRI="#parent"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#partOfHistoricalPeriod"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#precededByHistoricalPeriod"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
         <ObjectProperty IRI="#sibling"/>
@@ -567,10 +620,6 @@
         <Class IRI="#Conflict"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#agent"/>
-        <Class IRI="#Victory"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#area"/>
         <Class IRI="#Occupation"/>
     </ObjectPropertyDomain>
@@ -581,6 +630,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#belligerent"/>
         <Class IRI="#Conflict"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belligerent"/>
+        <Class IRI="#Victory"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#casusBelli"/>
@@ -741,10 +794,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#aftermath"/>
         <Class IRI="#Aftermath"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#agent"/>
-        <Class IRI="#Belligerent"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#area"/>
@@ -1143,6 +1192,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#belligerent</IRI>
+        <Literal xml:lang="en">Represents the belligerent associated with a conflict or a victory.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#child</IRI>
         <Literal xml:lang="en">Represents the individual that has been conceived, born, or legally adopted by the parent individual.</Literal>
     </AnnotationAssertion>
@@ -1165,6 +1219,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#endDate</IRI>
         <Literal xml:lang="en">Represents the date when an action, interval, or agent ends.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#followedByHistoricalPeriod</IRI>
+        <Literal xml:lang="en">Represents a historical period that is chronologically an immediate successor to a given historical period.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1194,7 +1253,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#includesHistoricalPeriod</IRI>
-        <Literal xml:lang="en">Represents the child historical periods of a given historical period.</Literal>
+        <Literal xml:lang="en">Represents the child historical period of a given historical period.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1243,6 +1302,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#precededByHistoricalPeriod</IRI>
+        <Literal xml:lang="en">Represents a historical period that is chronologically an immediate ancestor to a given historical period.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#precededByState</IRI>
         <Literal xml:lang="en">Represents a state that is an immediate ancestor to a given state.</Literal>
     </AnnotationAssertion>
@@ -1285,6 +1349,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#venueState</IRI>
         <Literal xml:lang="en">Represents the state in which a conference or meeting takes place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#victoryType</IRI>
+        <Literal xml:lang="en">Represents the victory type of a given victory.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
