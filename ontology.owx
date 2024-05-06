@@ -481,25 +481,58 @@
         <ObjectProperty IRI="#stateBefore"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
+        <ObjectProperty IRI="#aftermath"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#casusBelli"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
         <ObjectProperty IRI="#conflict"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#conflictType"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#followedByHistoricalPeriod"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isAgent"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#partOfWar"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
         <ObjectProperty IRI="#precededByHistoricalPeriod"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#result"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#victoryType"/>
     </FunctionalObjectProperty>
     <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#aftermath"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#belligerent"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#casusBelli"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
         <ObjectProperty IRI="#conflict"/>
     </InverseFunctionalObjectProperty>
     <InverseFunctionalObjectProperty>
         <ObjectProperty IRI="#followedByHistoricalPeriod"/>
     </InverseFunctionalObjectProperty>
     <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#includesBattle"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
         <ObjectProperty IRI="#precededByHistoricalPeriod"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#result"/>
     </InverseFunctionalObjectProperty>
     <SymmetricObjectProperty>
         <ObjectProperty IRI="#sibling"/>
@@ -527,9 +560,6 @@
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
         <ObjectProperty IRI="#includesHistoricalPeriod"/>
-    </AsymmetricObjectProperty>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="#location"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
         <ObjectProperty IRI="#notInFavorOf"/>
@@ -584,9 +614,6 @@
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
         <ObjectProperty IRI="#includesHistoricalPeriod"/>
-    </IrreflexiveObjectProperty>
-    <IrreflexiveObjectProperty>
-        <ObjectProperty IRI="#location"/>
     </IrreflexiveObjectProperty>
     <IrreflexiveObjectProperty>
         <ObjectProperty IRI="#notInFavorOf"/>
@@ -979,6 +1006,12 @@
         <DataProperty IRI="#venueLocation"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#endDate"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#startDate"/>
+    </FunctionalDataProperty>
     <DataPropertyDomain>
         <DataProperty IRI="#casualties"/>
         <Class IRI="#Belligerent"/>
@@ -1092,6 +1125,21 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Battle</IRI>
+        <Literal xml:lang="en">A class reprsenting a smaller one-time armed conflict, i. e. a battle. Usually associated with a war in which this battle takes place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Belligerent</IRI>
+        <Literal xml:lang="en">A class representing a country or a group which is officially participating in a conflict.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BelligerentGroup</IRI>
+        <Literal xml:lang="en">A class representing a group of allies participating in a coflict.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Cause</IRI>
         <Literal xml:lang="en">An enumeration representing all of the different causes for conflict.</Literal>
     </AnnotationAssertion>
@@ -1099,6 +1147,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Conference</IRI>
         <Literal xml:lang="en">A class representing a conference or other major political meeting of parties relevant to a conflict as a consequence of it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Conflict</IRI>
+        <Literal xml:lang="en">The main class of this ontology representing any conflict and its characteristics.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1187,6 +1240,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#War</IRI>
+        <Literal xml:lang="en">A class representing an intense long-term armed conflict, i. e. a war. May include a certain amount of battles.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#aftermath</IRI>
+        <Literal xml:lang="en">Represents the outcome of a conflict.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#area</IRI>
         <Literal xml:lang="en">Represents the area affected by a territorial change or an occupation.</Literal>
     </AnnotationAssertion>
@@ -1197,6 +1260,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#casualties</IRI>
+        <Literal xml:lang="en">Represents the amount of casualties of a given belligerent in a particular conflict.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#casusBelli</IRI>
+        <Literal xml:lang="en">Represents the act or the event that leads to or is used to justify a war conflict.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#child</IRI>
         <Literal xml:lang="en">Represents the individual that has been conceived, born, or legally adopted by the parent individual.</Literal>
     </AnnotationAssertion>
@@ -1204,6 +1277,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#conflict</IRI>
         <Literal xml:lang="en">Represents the conflict associated with a belligerent, aftermath or result.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#conflictType</IRI>
+        <Literal xml:lang="en">Represents the conflict type of a given conflict.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1252,6 +1330,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#includesBattle</IRI>
+        <Literal xml:lang="en">Represents battle that took place in a given war.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#includesBelligerent</IRI>
+        <Literal xml:lang="en">Represents belligerent that is a member of a given belligerent group.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#includesHistoricalPeriod</IRI>
         <Literal xml:lang="en">Represents the child historical period of a given historical period.</Literal>
     </AnnotationAssertion>
@@ -1262,13 +1350,23 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isAgent</IRI>
+        <Literal xml:lang="en">Represents the agent that characterises a given belligerent.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isBeligerent</IRI>
         <Literal xml:lang="en">Represents the beligerent whose agent is given agent.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#leader</IRI>
-        <Literal xml:lang="en">Represents the individual who directs, manages, or represents the group.</Literal>
+        <Literal xml:lang="en">Represents the individual who directs, manages, or represents a state or a group.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#location</IRI>
+        <Literal xml:lang="en">Represents the location in which a conflict takes place.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1302,6 +1400,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#partOfWar</IRI>
+        <Literal xml:lang="en">Represents the war in which a given battle took place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#precededByHistoricalPeriod</IRI>
         <Literal xml:lang="en">Represents a historical period that is chronologically an immediate ancestor to a given historical period.</Literal>
     </AnnotationAssertion>
@@ -1314,6 +1417,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#religion</IRI>
         <Literal xml:lang="en">Represents the religion which the agent practices or whose beliefs, teachings, or community does the agent identifiy with.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#result</IRI>
+        <Literal xml:lang="en">Represents the result of a conflict. Either a victory of a belligerent or a truce.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1339,6 +1447,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#stateBefore</IRI>
         <Literal xml:lang="en">Represents the state in time before a regime change took place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#strength</IRI>
+        <Literal xml:lang="en">Represents the military strength of a given belligerent in a particular conflict.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
