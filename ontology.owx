@@ -151,7 +151,7 @@
         <ObjectProperty IRI="#isAgent"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#isBeligerent"/>
+        <ObjectProperty IRI="#isBelligerent"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#leader"/>
@@ -365,7 +365,7 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#isBeligerent"/>
+        <ObjectProperty IRI="#isBelligerent"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -739,7 +739,7 @@
         <Class IRI="#Belligerent"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isBeligerent"/>
+        <ObjectProperty IRI="#isBelligerent"/>
         <Class IRI="#Agent"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -895,7 +895,7 @@
         <Class IRI="#Agent"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#isBeligerent"/>
+        <ObjectProperty IRI="#isBelligerent"/>
         <Class IRI="#Belligerent"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -1355,8 +1355,8 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#isBeligerent</IRI>
-        <Literal xml:lang="en">Represents the beligerent whose agent is given agent.</Literal>
+        <IRI>#isBelligerent</IRI>
+        <Literal xml:lang="en">Represents the belligerent whose agent is given agent.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
