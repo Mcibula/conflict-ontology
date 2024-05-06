@@ -1116,7 +1116,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Agent</IRI>
-        <Literal xml:lang="en">A class representing entities that were actively engaged in a conflict or whose infuelnce in said conflict was not negligible.</Literal>
+        <Literal xml:lang="en">A class representing entities that were actively engaged in a conflict or whose influence in said conflict was not negligible.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
