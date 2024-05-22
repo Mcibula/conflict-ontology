@@ -11,6 +11,7 @@
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
         <Class IRI="#Aftermath"/>
@@ -214,9 +215,6 @@
         <DataProperty IRI="#endDate"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#name"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#outcome"/>
     </Declaration>
     <Declaration>
@@ -228,6 +226,141 @@
     <Declaration>
         <DataProperty IRI="#venueLocation"/>
     </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="foaf:name"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#absoluteMonarchy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#aerial"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#biological"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#chemical"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#civil"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cold"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#constitutionalMonarchy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cyber"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dictatorship"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#economic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#economicCause"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hybrid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ideologicalCause"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#informational"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#naval"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#parliamentaryDemocracy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#participatoryDemocracy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#politicalCause"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#presidentialDemocracy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#proxy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#psychological"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#radiological"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#religiousCause"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#strategic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tactical"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#territorialCause"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#theocracy"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Cause"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#economicCause"/>
+            <NamedIndividual IRI="#ideologicalCause"/>
+            <NamedIndividual IRI="#politicalCause"/>
+            <NamedIndividual IRI="#religiousCause"/>
+            <NamedIndividual IRI="#territorialCause"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ConflictType"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#aerial"/>
+            <NamedIndividual IRI="#biological"/>
+            <NamedIndividual IRI="#chemical"/>
+            <NamedIndividual IRI="#civil"/>
+            <NamedIndividual IRI="#cold"/>
+            <NamedIndividual IRI="#cyber"/>
+            <NamedIndividual IRI="#economic"/>
+            <NamedIndividual IRI="#hot"/>
+            <NamedIndividual IRI="#hybrid"/>
+            <NamedIndividual IRI="#informational"/>
+            <NamedIndividual IRI="#naval"/>
+            <NamedIndividual IRI="#proxy"/>
+            <NamedIndividual IRI="#psychological"/>
+            <NamedIndividual IRI="#radiological"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#GovernmentForm"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#absoluteMonarchy"/>
+            <NamedIndividual IRI="#constitutionalMonarchy"/>
+            <NamedIndividual IRI="#dictatorship"/>
+            <NamedIndividual IRI="#parliamentaryDemocracy"/>
+            <NamedIndividual IRI="#participatoryDemocracy"/>
+            <NamedIndividual IRI="#presidentialDemocracy"/>
+            <NamedIndividual IRI="#theocracy"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#VictoryType"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#strategic"/>
+            <NamedIndividual IRI="#tactical"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#AgentGroup"/>
         <Class IRI="#Agent"/>
@@ -292,6 +425,118 @@
         <Class IRI="#War"/>
         <Class IRI="#Conflict"/>
     </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#GovernmentForm"/>
+        <NamedIndividual IRI="#absoluteMonarchy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ConflictType"/>
+        <NamedIndividual IRI="#aerial"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ConflictType"/>
+        <NamedIndividual IRI="#biological"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ConflictType"/>
+        <NamedIndividual IRI="#chemical"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ConflictType"/>
+        <NamedIndividual IRI="#civil"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ConflictType"/>
+        <NamedIndividual IRI="#cold"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GovernmentForm"/>
+        <NamedIndividual IRI="#constitutionalMonarchy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ConflictType"/>
+        <NamedIndividual IRI="#cyber"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GovernmentForm"/>
+        <NamedIndividual IRI="#dictatorship"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ConflictType"/>
+        <NamedIndividual IRI="#economic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cause"/>
+        <NamedIndividual IRI="#economicCause"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ConflictType"/>
+        <NamedIndividual IRI="#hot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ConflictType"/>
+        <NamedIndividual IRI="#hybrid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cause"/>
+        <NamedIndividual IRI="#ideologicalCause"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ConflictType"/>
+        <NamedIndividual IRI="#informational"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ConflictType"/>
+        <NamedIndividual IRI="#naval"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GovernmentForm"/>
+        <NamedIndividual IRI="#parliamentaryDemocracy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GovernmentForm"/>
+        <NamedIndividual IRI="#participatoryDemocracy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cause"/>
+        <NamedIndividual IRI="#politicalCause"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GovernmentForm"/>
+        <NamedIndividual IRI="#presidentialDemocracy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ConflictType"/>
+        <NamedIndividual IRI="#proxy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ConflictType"/>
+        <NamedIndividual IRI="#psychological"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ConflictType"/>
+        <NamedIndividual IRI="#radiological"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cause"/>
+        <NamedIndividual IRI="#religiousCause"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VictoryType"/>
+        <NamedIndividual IRI="#strategic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#VictoryType"/>
+        <NamedIndividual IRI="#tactical"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cause"/>
+        <NamedIndividual IRI="#territorialCause"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GovernmentForm"/>
+        <NamedIndividual IRI="#theocracy"/>
+    </ClassAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#aftermath"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
@@ -987,10 +1232,6 @@
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="#name"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="#outcome"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
@@ -1004,6 +1245,10 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#venueLocation"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="foaf:name"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <FunctionalDataProperty>
@@ -1037,18 +1282,6 @@
         <Class IRI="#HistoricalPeriod"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#name"/>
-        <Class IRI="#Aftermath"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#name"/>
-        <Class IRI="#Agent"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#name"/>
-        <Class IRI="#HistoricalPeriod"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#outcome"/>
         <Class IRI="#Conference"/>
     </DataPropertyDomain>
@@ -1075,6 +1308,18 @@
     <DataPropertyDomain>
         <DataProperty IRI="#venueLocation"/>
         <Class IRI="#Conference"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="foaf:name"/>
+        <Class IRI="#Aftermath"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="foaf:name"/>
+        <Class IRI="#Agent"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="foaf:name"/>
+        <Class IRI="#HistoricalPeriod"/>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="#casualties"/>
@@ -1089,10 +1334,6 @@
         <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#name"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="#outcome"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -1106,6 +1347,10 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#venueLocation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="foaf:name"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <AnnotationAssertion>
@@ -1370,11 +1615,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#name</IRI>
-        <Literal xml:lang="en">Represents the name of a thing.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#notInFavorOf</IRI>
         <Literal xml:lang="en">Represents the belligerent for which the aftermath of a conflict is detrimental.</Literal>
     </AnnotationAssertion>
@@ -1467,6 +1707,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#victoryType</IRI>
         <Literal xml:lang="en">Represents the victory type of a given victory.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>foaf:name</AbbreviatedIRI>
+        <Literal xml:lang="en">Represents the name of a thing.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
