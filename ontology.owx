@@ -110,6 +110,9 @@
         <ObjectProperty IRI="#child"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#conference"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#conflict"/>
     </Declaration>
     <Declaration>
@@ -374,10 +377,6 @@
         <Class IRI="#Belligerent"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Conference"/>
-        <Class IRI="#PoliticalOutcome"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#ConflictAftermath"/>
         <Class IRI="#Aftermath"/>
     </SubClassOf>
@@ -558,6 +557,10 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#conference"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#conflict"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -881,10 +884,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#area"/>
-        <ObjectUnionOf>
-            <Class IRI="#Occupation"/>
-            <Class IRI="#TerritorialChange"/>
-        </ObjectUnionOf>
+        <Class IRI="#PolarAftermath"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#belligerent"/>
@@ -902,10 +902,15 @@
         <Class IRI="#Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#conference"/>
+        <Class IRI="#Conflict"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#conflict"/>
         <ObjectUnionOf>
             <Class IRI="#Aftermath"/>
             <Class IRI="#Belligerent"/>
+            <Class IRI="#Conference"/>
             <Class IRI="#Result"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
@@ -1059,6 +1064,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#child"/>
         <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#conference"/>
+        <Class IRI="#Conference"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#conflict"/>
@@ -1243,19 +1252,12 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#endDate"/>
-        <Class IRI="#Aftermath"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#endDate"/>
-        <Class IRI="#Agent"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#endDate"/>
-        <Class IRI="#Conflict"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#endDate"/>
-        <Class IRI="#HistoricalPeriod"/>
+        <ObjectUnionOf>
+            <Class IRI="#Aftermath"/>
+            <Class IRI="#Agent"/>
+            <Class IRI="#Conflict"/>
+            <Class IRI="#HistoricalPeriod"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#outcome"/>
@@ -1263,19 +1265,12 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#startDate"/>
-        <Class IRI="#Aftermath"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#startDate"/>
-        <Class IRI="#Agent"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#startDate"/>
-        <Class IRI="#Conflict"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#startDate"/>
-        <Class IRI="#HistoricalPeriod"/>
+        <ObjectUnionOf>
+            <Class IRI="#Aftermath"/>
+            <Class IRI="#Agent"/>
+            <Class IRI="#Conflict"/>
+            <Class IRI="#HistoricalPeriod"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#strength"/>
@@ -1287,15 +1282,11 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI="foaf:name"/>
-        <Class IRI="#Aftermath"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="foaf:name"/>
-        <Class IRI="#Agent"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="foaf:name"/>
-        <Class IRI="#HistoricalPeriod"/>
+        <ObjectUnionOf>
+            <Class IRI="#Aftermath"/>
+            <Class IRI="#Agent"/>
+            <Class IRI="#HistoricalPeriod"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="#casualties"/>
@@ -1363,11 +1354,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Cause</IRI>
         <Literal xml:lang="en">An enumeration representing all of the different causes for conflict.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Conference</IRI>
-        <Literal xml:lang="en">A class representing a conference or other major political meeting of parties relevant to a conflict as a consequence of it.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
