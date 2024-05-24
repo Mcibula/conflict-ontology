@@ -682,20 +682,8 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#aftermath"/>
-        <ObjectProperty IRI="#conflict"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#belligerent"/>
-        <ObjectProperty IRI="#conflict"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
         <ObjectProperty IRI="#child"/>
         <ObjectProperty IRI="#parent"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#conflict"/>
-        <ObjectProperty IRI="#result"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#followedByHistoricalPeriod"/>
@@ -893,19 +881,17 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#area"/>
-        <Class IRI="#Occupation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#area"/>
-        <Class IRI="#TerritorialChange"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#belligerent"/>
-        <Class IRI="#Conflict"/>
+        <ObjectUnionOf>
+            <Class IRI="#Occupation"/>
+            <Class IRI="#TerritorialChange"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#belligerent"/>
-        <Class IRI="#Victory"/>
+        <ObjectUnionOf>
+            <Class IRI="#Conflict"/>
+            <Class IRI="#Victory"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#casusBelli"/>
@@ -917,15 +903,11 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#conflict"/>
-        <Class IRI="#Aftermath"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#conflict"/>
-        <Class IRI="#Belligerent"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#conflict"/>
-        <Class IRI="#Result"/>
+        <ObjectUnionOf>
+            <Class IRI="#Aftermath"/>
+            <Class IRI="#Belligerent"/>
+            <Class IRI="#Result"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#conflictType"/>
@@ -957,11 +939,10 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#includesAgent"/>
-        <Class IRI="#AgentGroup"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#includesAgent"/>
-        <Class IRI="#HistoricalPeriod"/>
+        <ObjectUnionOf>
+            <Class IRI="#AgentGroup"/>
+            <Class IRI="#HistoricalPeriod"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#includesBattle"/>
@@ -989,15 +970,11 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#leader"/>
-        <Class IRI="#AgentGroup"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#leader"/>
-        <Class IRI="#Belligerent"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#leader"/>
-        <Class IRI="#State"/>
+        <ObjectUnionOf>
+            <Class IRI="#AgentGroup"/>
+            <Class IRI="#Belligerent"/>
+            <Class IRI="#State"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#location"/>
@@ -1161,11 +1138,10 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#partOf"/>
-        <Class IRI="#AgentGroup"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#partOf"/>
-        <Class IRI="#State"/>
+        <ObjectUnionOf>
+            <Class IRI="#AgentGroup"/>
+            <Class IRI="#State"/>
+        </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#partOfHistoricalPeriod"/>
