@@ -697,14 +697,6 @@
         <ObjectProperty IRI="#precededByState"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#inHistoricalPeriod"/>
-        <ObjectProperty IRI="#includesAgent"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#includesAgent"/>
-        <ObjectProperty IRI="#partOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
         <ObjectProperty IRI="#includesBattle"/>
         <ObjectProperty IRI="#partOfWar"/>
     </InverseObjectProperties>
