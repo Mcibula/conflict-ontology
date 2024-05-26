@@ -1272,14 +1272,6 @@
         <DataProperty IRI="#venueLocation"/>
         <Class IRI="#Conference"/>
     </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="foaf:name"/>
-        <ObjectUnionOf>
-            <Class IRI="#Aftermath"/>
-            <Class IRI="#Agent"/>
-            <Class IRI="#HistoricalPeriod"/>
-        </ObjectUnionOf>
-    </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="#casualties"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
@@ -1306,10 +1298,6 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#venueLocation"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty abbreviatedIRI="foaf:name"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <AnnotationAssertion>
@@ -1400,7 +1388,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Religion</IRI>
-        <Literal xml:lang="en">An enumeration representing all of the different religions.</Literal>
+        <Literal xml:lang="en">A class representing systems of faith and worship.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1661,11 +1649,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#victoryType</IRI>
         <Literal xml:lang="en">Represents the victory type of a given victory.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>foaf:name</AbbreviatedIRI>
-        <Literal xml:lang="en">Represents the name of a thing.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
