@@ -704,10 +704,6 @@
         <ObjectProperty IRI="#includesHistoricalPeriod"/>
         <ObjectProperty IRI="#partOfHistoricalPeriod"/>
     </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#stateAfter"/>
-        <ObjectProperty IRI="#stateBefore"/>
-    </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#aftermath"/>
     </FunctionalObjectProperty>
